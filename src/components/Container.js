@@ -1,21 +1,38 @@
 import React from "react";
+import Container from "./Container";
 
-function Container({
-  header,
-  children,
-  textPosition = "", // possible values: left, right, center
-  direction = "horizontal", // possible values: vertical, horizontal
-  contentPosition = "center", // possible values: left, right, center
-}) {
+function App() {
   return (
-    <div className={`container ${textPosition}`}>
-      {header ? <h2>{header}</h2> : null}
-
-      <div className={`container-children ${direction} ${contentPosition}`}>
-        {children}
-      </div>
+    <div className="App">
+      <Container header="Example header" direction="horizontal">
+        <div>This is an example!</div>
+        <div>This is an example!</div>
+        <div>This is an example!</div>
+        <div>This is an example!</div>
+        <div>This is an example!</div>
+        <div>This is an example!</div>
+        <div>This is an example!</div>
+      </Container>
+      <Container header="Example header" textPosition="center">
+        <img
+          alt="turtle"
+          src="https://pbs.twimg.com/profile_images/3022993403/fdae67d800527328cee7a222f048dbbd.jpeg"
+        />
+        <img
+          alt="turtle"
+          src="https://pbs.twimg.com/profile_images/3022993403/fdae67d800527328cee7a222f048dbbd.jpeg"
+        />
+        <img
+          alt="turtle"
+          src="https://pbs.twimg.com/profile_images/3022993403/fdae67d800527328cee7a222f048dbbd.jpeg"
+        />
+        <img
+          alt="turtle"
+          src="https://pbs.twimg.com/profile_images/3022993403/fdae67d800527328cee7a222f048dbbd.jpeg"
+        />
+      </Container>
     </div>
   );
 }
 
-export default Container;
+export default App;
